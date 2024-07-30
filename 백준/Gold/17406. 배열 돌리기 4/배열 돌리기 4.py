@@ -24,9 +24,6 @@ def rotate(info, a):
         for j in range(bottom, top-1, -1):
             a[j][left], last = last, a[j][left]
 
-    # print("info :", info)
-    # for l in a:
-    #     print(l)
     return a
 
 def rotate_all(infos, a):
@@ -34,15 +31,12 @@ def rotate_all(infos, a):
         rotate(info,a)
     res = math.inf
     for l in a:
-        # print(l,":" ,sum(l))
         res = min(sum(l),res)
     
-    # print(res)
     return res
 
 res = math.inf
 for infos in all_infos:
-    # print(infos)
     b = [arr[:] for arr in a]
     res = min(res, rotate_all(infos, b))
 
