@@ -2,7 +2,7 @@ def solution(n, wires):
     answer = 100
     
     tree = [[] for _ in range(n)]
-    sub = [1]*n #[[1] for i in range(n)]
+    sub = [1]*n
     
     for s,d in wires:
         s,d = s-1,d-1
